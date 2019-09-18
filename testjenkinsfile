@@ -1,0 +1,7 @@
+pipeline {
+    stages{
+        stage('echo') {
+            sh 'echo "Sri Ramajeyam..! Hello World..!"'
+        }
+    }
+}
