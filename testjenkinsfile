@@ -1,7 +1,10 @@
 pipeline {
+    agent { label 'master-linux'}
     stages{
-        stage('echo') {
-            sh 'echo "Sri Ramajeyam..! Hello World..!"'
+        stage('Sri Ramajeyam from GitHub') {
+            steps {
+                sh 'echo "Sri Ramajeyam..! Hello World..!"'
+            }
         }
     }
 }
