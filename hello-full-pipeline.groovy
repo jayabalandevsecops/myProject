@@ -1,6 +1,7 @@
 pipeline {
     agent any
-    triggers { cron('H/5 * * * *') }
+    logRotator(-1, 2)
+    triggers { cron('H/2 13 4 * *') }
     options { timeout(time: 5) }
     parameters {
         booleanParam(name: 'DEBUG_BUILD', defaultValue: true, 
