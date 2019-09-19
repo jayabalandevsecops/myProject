@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    logRotator(-1, 2)
     triggers { cron('H/2 13 4 * *') }
     options { timeout(time: 5) }
     parameters {
@@ -10,6 +9,7 @@ pipeline {
     stages{
         stage('Example') {
             environment { Name = 'SriRam' }
+            logRotator(-1, 2)
             when { expression { return params.DEBUG_BUILD } }
             steps {
                 echo "Hello from $NAME"
