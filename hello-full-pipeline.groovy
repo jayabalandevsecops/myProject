@@ -9,7 +9,7 @@ pipeline {
     stages{
         stage('Example') {
             environment { Name = 'SriRam' }
-            logRotator(-1, 2)
+            // logRotator(-1, 2)
             when { expression { return params.DEBUG_BUILD } }
             steps {
                 echo "Hello from $NAME"
